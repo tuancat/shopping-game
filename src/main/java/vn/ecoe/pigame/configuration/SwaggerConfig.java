@@ -24,9 +24,9 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("ECOE REST API for contact", "See the information.", "API ECOE01", "Terms of service",
-                new Contact("ECOE company", "https://ecoegroup.com", "info@ecoe.vn"), "License of ECOE company",
-                "API license URL", Collections.emptyList());
+        return new ApiInfo("Shopping REST API for contact", "See the information.", "API", "Terms of service",
+                new Contact(" company", "", "tuan.catnghiemhieu@gmail.com"), "No License",
+                "", Collections.emptyList());
     }
 
     /*
