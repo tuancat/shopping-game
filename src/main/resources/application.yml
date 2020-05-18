@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+  jmx:
+    default-domain: shoppinggame
+server:
+  port: 8080
+  servlet:
+    context-path: /shopping-service
+---
+spring:
+  profiles: dev
+  jpa:
+    database: MYSQL
+    hibernate.ddl-auto: create-drop
+    show-sql: true
+    format-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/pigame?useSSL=false&allowPublicKeyRetrieval=true
+    password:
+    username: root
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/pigametest?useSSL=false&allowPublicKeyRetrieval=true
+    password:
+    username: root
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://localhost:3306/pigameprod?useSSL=false&allowPublicKeyRetrieval=true
+    password: root
+    username: root
+
